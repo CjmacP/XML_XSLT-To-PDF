@@ -40,12 +40,12 @@ def event_gui():
 
             html_name = [i.replace('.xml', '.html') for i in xml_list]
 
-            pdf_name = [i.replace('.xml', '.pdf') for i in xml_list]
+            pdf_name = [i.replace('.xml', '.pdf') for i in xml_list]    # Use the original name of the XML file for PDF file
 
             for num, xml_target in enumerate(xml_list):
                 try:
 
-                    xsltfile = ET.XSLT(ET.parse(os.path.expanduser(r'~\Documents\test\AQSVMobile_SS1.xsl')))
+                    xsltfile = ET.XSLT(ET.parse(os.path.expanduser(r'~\Documents\test.xsl')))   # XSL file used to convert XML file
 
                     xmlfile = ET.parse(Folder + '/' + xml_target)
 
@@ -59,7 +59,7 @@ def event_gui():
                     os.remove(os.path.expanduser(Folder + '/' + html_name[num]))
 
                 except Exception as a:
-                    sg.Popup(a, '-------------------', 'Show this to Chris')
+                    sg.Popup(a, '-------------------', 'Error Occurred')
                     break
             event_gui()
             break
