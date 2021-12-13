@@ -1,4 +1,4 @@
 pdfkit==0.6.1
-lxml==4.3.2
+lxml==4.6.5
 PySimpleGUI==3.25.0
 pdfkit.configuration -- wkhtmltopdf.exe at -- https://wkhtmltopdf.org/downloads.html --
